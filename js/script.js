@@ -37,20 +37,27 @@ var pcRandom = rand(1,5);
 
 
 // Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+var checkCampi = true;
 
-var parOdisp = prompt('scegli pari o dispari');
-var numero = parseInt(prompt('scegli un numero da 1 a 5'));
-
-// controllo che i valori inseriti siano correti 
-if (!(isNaN(parOdisp)) || isNaN(numero)) {
-    alert('inserisci i valori corretti nei giusti campi');
-    parOdisp = prompt('scegli pari o dispari');
-    numero = parseInt(prompt('scegli un numero da 1 a 5'));
-}
-if (numero < 1 || numero > 5) {
-    alert('il numero deve essere compreso tra 1  e 5');
+while (checkCampi) {
+    var parOdisp = prompt('scegli pari o dispari');
     var numero = parseInt(prompt('scegli un numero da 1 a 5'));
+    checkCampi = false;
+    // controllo che i valori inseriti siano correti 
+    if (!(isNaN(parOdisp)) || isNaN(numero)){
+        alert('inserisci i valori corretti nei giusti campi');
+        checkCampi = true;
+    }
+    if (parOdisp !== 'pari' && parOdisp !== 'dispari') {
+        alert('puoi scegliere solo pari o dispari');
+        checkCampi = true;
+    }
+    if (numero < 1 || numero > 5) {
+        alert('il numero deve essere compreso tra 1  e 5');
+        checkCampi = true;
+    }
 }
+
 
 // Sommiamo i due numeri.
 var somma = pcRandom + numero;
