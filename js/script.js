@@ -23,3 +23,33 @@ if (check[1]) {
 } else {
     document.getElementById('parola').innerHTML = 'La parola inserita non è palindroma : ' + check[0];
 }
+
+
+
+// Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri. Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
+
+// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+function rand(min,max) {
+    var nRandom = Math.floor((Math.random() * ((max + 1) - min) + min))
+    return nRandom
+}
+var pcRandom = rand(1,5);
+
+
+// Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+
+var parOdisp = prompt('scegli pari o dispari');
+var numero = parseInt(prompt('scegli un numero da 1 a 5'));
+
+// controllo che i valori inseriti siano correti 
+if (!(isNaN(parOdisp)) || isNaN(numero)) {
+    alert('inserisci i valori corretti nei giusti campi');
+    parOdisp = prompt('scegli pari o dispari');
+    numero = parseInt(prompt('scegli un numero da 1 a 5'));
+}
+if (numero < 1 || numero > 5) {
+    alert('il numero deve essere compreso tra 1  e 5');
+    var numero = parseInt(prompt('scegli un numero da 1 a 5'));
+}
+
+
