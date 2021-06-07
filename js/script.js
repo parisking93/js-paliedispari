@@ -113,3 +113,5 @@ clean.addEventListener('click', function(){
     document.getElementById('parola').innerHTML = "";
 });
 
+
+
