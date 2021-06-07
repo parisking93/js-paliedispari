@@ -52,4 +52,26 @@ if (numero < 1 || numero > 5) {
     var numero = parseInt(prompt('scegli un numero da 1 a 5'));
 }
 
+// Sommiamo i due numeri.
+var somma = pcRandom + numero;
 
+
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
+
+function checkPoD(number) {
+    if(number % 2 == 0) {
+        return 'pari';
+    } else {
+        return 'dispari';
+    }
+}
+
+var risult = checkPoD(somma);
+
+if (risult == parOdisp) {
+    document.getElementById('par-disp').innerHTML = 'il numero è ' + risult + ' HAI VINTO';
+    // console.log(pcRandom, numero);
+} else {
+    document.getElementById('par-disp').innerHTML = 'il numero è ' + risult + ' HAI PERSO';
+    // console.log(pcRandom, numero);
+}
