@@ -67,6 +67,7 @@ function checkPoD(number) {
 }
 
 var risult = checkPoD(somma);
+    document.getElementById('somma').innerHTML = 'il tuo numero è ' + numero + '  e hai scelto ' + parOdisp + '<br>' + 'il numero del pc è ' + pcRandom + '<br>' + 'la loro somma è ' + somma ;
 
 if (risult == parOdisp) {
     document.getElementById('par-disp').innerHTML = 'il numero è ' + risult + ' HAI VINTO';
