@@ -13,7 +13,16 @@ function start() {
         }
     }
     // input 
-    var pali = prompt('inserisci una parola');
+    var checkParola = true;
+    while (checkParola) {
+        checkParola = false;
+        var pali = prompt('inserisci una parola');
+        if (!(isNaN(pali)) || pali == null) {
+            alert('non puoi inserire numeri o lasciare campi liberi');
+            checkParola = true;
+        }
+    }
+    
     
     // output 
     var check = palindroma(pali);
