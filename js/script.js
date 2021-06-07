@@ -92,3 +92,15 @@ function parEdisp() {
 }
 var gioco = document.getElementById('par');
 gioco.addEventListener('click', parEdisp);
+
+
+
+// PULISCI PAGINA 
+
+var clean = document.getElementById('clean');
+clean.addEventListener('click', function(){
+    document.getElementById('par-disp').innerHTML = "";
+    document.getElementById('somma').innerHTML = "";
+    document.getElementById('parola').innerHTML = "";
+});
+
