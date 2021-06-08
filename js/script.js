@@ -3,7 +3,7 @@ function start() {
     function palindroma(parola) {
         parola = parola.toLowerCase();
         var newParola = '';
-        for (i = parola.length - 1; i >= 0; i--) {
+        for (var i = parola.length - 1; i >= 0; i--) {
             newParola += parola[i]
         }
         if (newParola == parola ) {
@@ -49,7 +49,6 @@ function parEdisp() {
     }
     var pcRandom = rand(1,5);
 
-
     // Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
     var checkCampi = true;
 
@@ -72,10 +71,8 @@ function parEdisp() {
         }
     }
 
-
     // Sommiamo i due numeri.
     var somma = pcRandom + numero;
-
 
     // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 
@@ -101,8 +98,6 @@ function parEdisp() {
 }
 var gioco = document.getElementById('par');
 gioco.addEventListener('click', parEdisp);
-
-
 
 // PULISCI PAGINA 
 
